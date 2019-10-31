@@ -178,57 +178,56 @@ h3 {
   display: block;
   margin: 41px auto 0px;
   font-family: "Metropolis";
-  font-size: 40px;
   font-weight: bold;
-  line-height: 48px;
+  font-size: 29px;
+  line-height: 40px;
 }
 
 p {
-  margin: 52px auto 0px;
+  margin: 30px 60px;
   display: block;
   font-size: 18px;
   font-weight: 300;
-  max-width: 1100px;
-  font-size: 30px;
-  margin-top: 52px;
+  max-width: 810px;
+  font-size: 23px;
 }
 
-
 ul {
-  margin: 52px auto 110px;
-  line-height: 48px;
   display: block;
   font-size: 18px;
   font-weight: 300;
   max-width: 1100px;
-  font-size: 30px;
+  margin: 32px 20px;
+  line-height: 36px;
+  font-size: 20px;
 }
 
 ol {
-  margin: 52px auto 0px;
-  line-height: 48px;
+  margin: 0px auto;
+  line-height: 24px;
   display: block;
   font-size: 18px;
   font-weight: 300;
   max-width: 800px;
-  font-size: 30px;
-  margin-top: 52px;
+  font-size: 18px;
+  line-height: 34px;
 }
 
 .instant-replay h3 {
-  color: #B01828;
+  color: #b01828;
   text-align: center;
 }
 
 .instant-replay p {
   color: rgba(168, 0, 18, 0.69);
   text-align: center;
-  margin-bottom: 130px;
+  margin-bottom: 50px;
 }
 
-.instant-replay img {
+.instant-replay img.logo {
   margin: 0 auto;
   display: block;
+  width: 60px;
 }
 
 .features,
@@ -239,7 +238,7 @@ ol {
 }
 
 .line-divider {
-  margin: 0 auto;
+  margin: 100px auto;
   display: block;
   width: 100%;
 }
@@ -256,11 +255,11 @@ ol {
 .features .feature-title img {
   display: inline;
   flex-grow: 0;
-  align-self: center
+  align-self: center;
 }
 
 .features > div {
-  margin: 130px auto 0;
+  margin: 80px auto 0;
   max-width: 1200px;
 }
 
@@ -268,8 +267,12 @@ ol {
   color: rgba(127, 73, 152, 0.7);
 }
 
+.features .feature-title img.logo {
+  width: 36px;
+}
+
 .features .logs h3 {
-  color: #7F4998;
+  color: #7f4998;
 }
 
 .features .logs ul {
@@ -279,6 +282,7 @@ ol {
 .features .progress {
   display: block;
   width: 100%;
+  margin-top: 100px;
 }
 
 .features .inspect {
@@ -298,7 +302,7 @@ ol {
 }
 
 .features .saved h3 {
-  color: #3B3491;
+  color: #3b3491;
 }
 
 .features .saved ul {
@@ -317,7 +321,7 @@ button {
   font-size: 31px;
   line-height: 42px;
   font-family: Inter;
-  color: #CE03E0;
+  color: #ce03e0;
   margin: 110px auto 0px;
   display: flex;
   align-items: center;
@@ -330,24 +334,24 @@ button span {
 
 .testimonials {
   display: none;
-  background: linear-gradient(180deg, #AA55DF 5%, #391DC6 80%);
+  background: linear-gradient(180deg, #aa55df 5%, #391dc6 80%);
   padding: 0px 0px 100px;
-  font-family: 'Open Sans', serif;
+  font-family: "Open Sans", serif;
 }
 
 .testimonials-content h3 {
   font-style: italic;
-  font-family: 'Open Sans', serif;
+  font-family: "Open Sans", serif;
   color: white;
   font-weight: 400;
-  color: #E8CFF6;
+  color: #e8cff6;
   width: 50%;
   margin-bottom: 50px;
   text-align: center;
 }
 
 .testimonials-item {
-  background: linear-gradient(352.83deg, #D17FFA -9.68%, #B66AF8 111.71%);
+  background: linear-gradient(352.83deg, #d17ffa -9.68%, #b66af8 111.71%);
   box-shadow: 8px 9px 16px rgba(0, 0, 0, 0.65);
   border-radius: 18px;
   width: 80vw;
@@ -377,7 +381,7 @@ blockquote::before {
   position: relative;
   height: 0;
   font-family: serif;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 blockquote::after {
@@ -390,18 +394,18 @@ blockquote::after {
   position: relative;
   height: 0;
   font-family: serif;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .testimonials-author {
-  margin: 30px 0px 0px 40px;  
+  margin: 30px 0px 0px 40px;
 }
 
 .footer {
-  background: linear-gradient(180deg, #523D96 5%, #442C82 80%);
-  color: #C0B6DF;
+  background: linear-gradient(153.77deg, #523c96 23.55%, #351b6d 78.65%);
+  color: #c0b6df;
   margin: 0 auto;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .footer a {
@@ -415,18 +419,23 @@ blockquote::after {
 .footer h3 {
   width: 50%;
   text-align: center;
-  margin: 0px auto;
+  font-weight: normal;
+  margin: 20px auto;
+  color: #c7bee5;
 }
+
 .footer-content {
   max-width: 1040px;
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 .bottom-logo {
   shape-outside: polygon(0px 0px, 100% 0px, 100% 100%);
   clip-path: polygon(-1px -1px, 100% -1px, 100% 100%);
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 100px;
 }
 
@@ -437,10 +446,10 @@ blockquote::after {
 
 .nightly-logo {
   background: url(assets/nightly.svg) no-repeat;
-  height: 200px;
+  height: 100px;
   background-size: contain;
   background-position: center;
-  margin-top: -150px;
+  margin-top: -100px;
   position: relative;
 }
 
@@ -471,7 +480,7 @@ blockquote::after {
   }
 
   .content {
-    margin: 50px auto 200px auto
+    margin: 50px auto 200px auto;
   }
 
   p {
@@ -481,22 +490,23 @@ blockquote::after {
 
   .testimonials-item-content {
     margin-left: 0px;
-  }  
+  }
 
   blockquote::after {
     bottom: 20px;
     right: -30px;
-  }  
+  }
 
   .testimonials-author {
-    margin-top: 40px;  
-  }  
+    margin-top: 40px;
+  }
 
   .footer-content {
     text-align: center;
   }
 
-  .footer p, .footer h3 {
+  .footer p,
+  .footer h3 {
     width: calc(100% - 40px);
     text-align: center;
     max-width: none;
@@ -504,10 +514,8 @@ blockquote::after {
   }
 }
 
-
 .videos .content {
   width: 800px;
-
 }
 
 .videos .above-fold {
@@ -515,7 +523,7 @@ blockquote::after {
 }
 
 .videos h1 {
-  color: #F30698;
+  color: #f30698;
   font-size: 40px;
   font-weight: normal;
   font-family: "Inter";
@@ -526,39 +534,52 @@ blockquote::after {
 }
 
 .video .description {
-    color: #525252;
-    margin-bottom: 20px;
-    width: 600px;
-  }
-
+  color: #525252;
+  margin-bottom: 20px;
+  width: 600px;
+}
 
 .dashed-border::before {
-  background-image: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%);
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0px;
-	left: 0px;
-	  content: "";
+  background-image: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  content: "";
 }
 
 .dashed-border::after {
-background-image: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%);
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0px;
-	left: 0px;
-	  content: "";
+  background-image: linear-gradient(
+    270deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  content: "";
 }
 
 .dashed-border {
   display: block;
   position: relative;
   height: 2px;
-  background-image: linear-gradient(90deg, transparent, transparent 50%, #F30698 50%, #F30698 100%);
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    transparent 50%,
+    #f30698 50%,
+    #f30698 100%
+  );
   background-size: 40px;
   border: none;
-  width:800px;
+  width: 800px;
   margin-top: 20px;
 }
