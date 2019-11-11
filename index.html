@@ -1,172 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/png" sizes="196x196" href="https://www.mozilla.org/media/img/firefox/developer/favicon-196.4d3c7b2d8c5b.png">
-    <title>Firefox Replay</title>
-
-    <link rel="preload" href="/assets/fonts/Metropolis-Bold.woff2" as="font" crossorigin>
-    <link rel="preload" href="/assets/Inter-Regular.woff2" as="font" crossorigin>
-    <link rel="stylesheet" href="/styles.css"></link>
-    <link rel="stylesheet" href="/assets/inter.css"></link>
-    <link rel="stylesheet" href="/assets/fonts/metropolis.css"></link>
-    <link rel="manifest" href="/manifest.json">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
-    <script src="/script.js" ></script>
-
   </head>
   <body>
-    <div style="display:none;" id="twitter">🚧Please do not share on twitter</div>
-    <header>
-    <div id="header-logo">
-      <div id="mozilla-logo"></div>
-      <a id="mozilla" href="/en-US/" data-link-name="mozilla home icon" data-link-type="nav">
-          Mozilla
-        </a>
-      <a id="webreplay-title">Firefox Replay</a>
+    <div class="header">
+      <div class="mozilla-logo"></div>
+      <div class="mozilla"></div>
+      <h2>Firefox Replay</h2>
       <div id="beta">BETA</div>
     </div>
-    <div id="header-links">
-      <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/WebReplay">Technology</a>
-      <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/WebReplayRoadmap">Roadmap</a>
-      <a href="https://devtools-html-slack.herokuapp.com">👋 Slack</a>
-    </div>
-
-    </header>
-
-
-    <div class="above-fold">
-        <picture>
-          <img class="replay-logo" src="/assets/ReplayButton.png" width="60">
-        </picture>
-      <div class="dotted-line"></div>
-      <h1>Timeless developer tools</h1>
-      <h2>Record and Replay your application because bugs are a thing of the past!</h2>
-
-      <div class="demo">
-        <img src="/assets/screenshots/1.png"/>
-        <!-- <div class="triangle"></div> -->
-      </div>
-    </div>
-
-
-    <div class="content">
-      <div class="instant-replay">
-        <img class="logo" src="/assets/icon-instant-replay.png">
-        <h3>Instant Replay</h3>
-        <p>Firefox records your page’s assets and events, so that it is possible to play back your session and better understand what happened. </p>
-        <img class="line-divider" src="/assets/dotted-line-red.png">
-      </div>
-
-      <div class="features">
-        <div class="logs">
-          <div class="feature-title">
-            <img class="logo" src="/assets/icon-logs.png">
-            <h3>Logs On Demand</h3>
-          </div>
-          <p>When you can add messages to the console after the fact, it becomes easy to understand the chronology of events such as: </p>
-          <ul>
-            <li><strong>Log Points:</strong> Show breakpoints hits with local variables</li>
-            <li><strong>XHR Events:</strong> Show API calls and resources events</li>
-            <li><strong>Event Listeners:</strong> Show Mouse, DOM, and Worker events</li>
-          </ul>
-          <img class="progress" src="/assets/replay.png"/>
-        </div>
-
-        <div class="inspect">
-          <div class="feature-title">
-            <img class="logo" src="/assets/icon-inspector.png">
-            <h3>Inspect the Past</h3>
-          </div>
-          <p>When you can rewind and inspect your application’s state, it becomes easier to understand how your application changed over time.</p>
-          <ul>
-              <li><strong>Step</strong> forward and backward through your code</li>
-              <li><strong>Play</strong> and rewind from any breakpoint</li>
-              <li><strong>Inspect</strong> the state of the DOM</li>
-              <li><strong>Evaluate</strong> expressions in the Console</li>
-          </ul>
-          <img class="line-divider" src="/assets/dotted-line-blue.png">
-        </div>
-
-        <div class="saved">
-          <div class="feature-title">
-            <img class="logo" src="/assets/icon-saved.png">
-            <h3>Saved Sessions</h3>
-          </div>
-          <p>When recordings can be saved and shared, it becomes possible to collaborate in whole new ways.</p>
-          <ul>
-            <li>QA can <strong>report</strong> bugs without steps to reproduce</li>
-            <li>Developers can <strong>reproduce</strong> the errors without trial and error</li>
-            <li>Intermittent tests can be <strong>replayed</strong> to diagnose race conditions</li>
-          </ul>
-        </div>
-
-        <a style="display: none;" class="learn-more" href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/WebReplay" target="_blank">
-          <button class="learn-more">
-            <span>Learn More</span>
-            <img src="/assets/learn-more-arrow.svg">
-          </button>
-        </a>
-
-      </div>
-    </div>
-
-    <div class="testimonials">
-      <div class="bottom-logo"></div>
-      <div class="testimonials-content">
-        <h3>What people are saying</h3>
-        <div class="testimonials-item">
-          <img class="testimonial-picture" src="/assets/eric-elliot.png">
-          <div class="testimonials-item-content">
-            <blockquote>Game development has had time travel debugging for the past decade. The technology is transformational and it is a no brainer for Javascript development.</blockquote>
-            <div class="testimonials-author">
-              <strong>Eric Elliot,</strong>
-              <span>Author of Javascript Applications</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonials-item">
-          <img class="testimonial-picture" src="/assets/brian-vaughn.png">
-          <div class="testimonials-item-content">
-            <blockquote>I used Firefox Replay to debug a tricky DevTools runtime error I've been trying to track down over the weekend. Really powerful feature! Can't wait for it to be released!</blockquote>
-            <div class="testimonials-author">
-              <strong>Brian Vaughn,</strong>
-              <span>React Maintainer</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonials-item">
-          <img class="testimonial-picture" src="/assets/kent-c-dodds.png">
-          <div class="testimonials-item-content">
-            <!-- find the proper quote for Kent Dodds -->
-            <blockquote>I used Firefox Replay to debug a tricky DevTools runtime error I've been trying to track down over the weekend. Really powerful feature! Can't wait for it to be released!</blockquote>
-            <div class="testimonials-author">
-              <strong>Kent C Dodds,</strong>
-              <span>React Maintainer</span>
-            </div>
-          </div>
+    <div class="hero">
+      <div class="hero-content">
+        <img src="/assets/replay.svg" class="replay-logo">
+        <h1 class="hero-header">
+          Never miss a thing
+        </h1>
+        <p>
+          Firefox Replay records your application, so you can track bugs down faster and understand your code better.
+        </p>
+        <div class="buttons">
+          <a href="#try">
+            <div class="button try-button">Try Replay</div>
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/WebReplay" target="_blank">
+            <div class="button learn-more-button">Learn More</div>
+          </a>
         </div>
       </div>
-    </div>
-
-
-
-  <div class="footer">
-    <div class="bottom-logo"></div>
-    <div class="nightly-logo"></div>
-    <div class="footer-content">
-      <div class="footer-copy">
-          <h3>Play with Replay</h3>
-          <ol>
-            <li>Download <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/">Firefox Nightly</a> for Mac OS X</li>
-            <li>Open DevTools > Settings and select "Enable Replay"</li>
-            <li>Click the Record button in DevTools</li>
-          </ol>
+      <div class="hero-image">
+        <img src="/assets/hero-replay.png">
       </div>
     </div>
-  </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-content">
+          <h1 class="feature-header">
+            Take it all in
+          </h1>      
+          <p>Scan through your entire code execution with one glance.</p>
+        </div>
+        <img src="/assets/features-1.gif">
+      </div>
+      <div class="feature">
+        <div class="feature-content">
+          <h1 class="feature-header">
+            Have the entire timeline at your fingertips
+          </h1>
+          <p>Get a clear picture of the changes in the DOM by hovering on the timeline.</p>
+        </div>
+        <img src="/assets/features-2.gif">
+      </div>
+      <div class="feature">
+        <div class="feature-content">
+          <h1 class="feature-header">
+            Catch everything you missed
+          </h1>
+          <p>Scan through markers of errors, events and server requests.</p>
+        </div>
+        <img src="/assets/features-3.gif">
+      </div>
+      <div class="feature">
+        <div class="feature-content">
+          <h1 class="feature-header">
+            Take a closer look
+          </h1>
+          <p>Click on any marker, and the debugger will jump to and pause at that point.</p>
+        </div>
+        <img src="/assets/features-4.gif">
+      </div>
+      <div class="feature">
+        <div class="feature-content">
+          <h1 class="feature-header">
+            Step back in time
+          </h1>
+          <p>For the first time, Replay allows you to step back in time.</p>
+        </div>
+        <img src="/assets/features-5.gif">
+      </div>  
+      <div class="feature">
+        <div class="feature-content">
+          <h1 class="feature-header">
+            Record once, debug anywhere
+          </h1>
+          <p>Save your recording and use it for debugging later, or share it with another developer.</p>
+        </div>
+        <img src="/assets/features-6.gif">
+      </div>  
+    </div>
+    <div class="instructions" id="try">
+      <h1>Try Replay Today</h1>
+      <ol>
+        <li class="instruction">
+          <img src="assets/instructions-1.png">
+          <p>Download <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/">Firefox Nightly</a> for macOS</p>
+        </li>
+        <li class="instruction">
+          <img src="assets/instructions-2.gif">
+          <p>Open DevTools, click on settings and click on "Enable Replay"</p>
+        </li>
+        <li class="instruction">
+          <img src="assets/instructions-3.gif">
+          <p>Click the Record button in DevTools</p>
+        </li>
+      </ol>
+    </div>
+  </body>
 </html>
