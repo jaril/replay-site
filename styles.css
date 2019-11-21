@@ -22,6 +22,10 @@ html {
   color: rgb(82, 95, 127);
 }
 
+body {
+  margin: 0px;
+}
+
 h1, h2, h3 {
   font-family: "Metropolis";
   font-weight: 800;
@@ -39,6 +43,8 @@ img {
   border-radius: 10px;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
+  z-index: 3;
+  position: relative;
 }
 
 .hero, .instructions {
@@ -54,23 +60,23 @@ img {
   flex-grow: 1;
   padding-top: 8px;
   padding-inline-start: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.background-wrapper {
+  background-image: url(/assets/wave.svg);
+  background-repeat: no-repeat;
+  background-color: #F7F7F7;
+  background-position-y: 100%;
+  background-size: cover;
 }
 
 .header h2 {
   font-family: "Metropolis";
   font-weight: 300;
   padding-top: 1px;
-}
-
-.header #beta {
-  background: linear-gradient( 107.15deg, #0165e4 -130.13%, #04a7f0 14.67%, #08eefe 157.57% );
   color: white;
-  padding: 2px 5px;
-  font-size: 10px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-left: 7px;
-  margin-top: 2px;
 }
 
 .mozilla-logo {
@@ -95,25 +101,44 @@ img {
 }
 
 .hero {
-  padding: 100px 0;
-  border-bottom: 1px solid #ebebea;
+  padding: 100px 0 240px;
   display: grid;
   grid-template-columns: 2fr 3fr;
   align-items: center;
+  color: white;
+}
+
+.hero h1 {
+  color: white;
+}
+
+.hero p {
+  font-size: 1.2em;
 }
 
 .hero .hero-content {
   padding-inline-end: 32px;
 }
 
-.hero .hero-content .replay-logo {
-  width: 80px;
-  box-shadow: none;
-  padding-bottom: 20px;
+.hero .hero-pill {
+  font-size: .8em;
+  padding: 6px 12px 6px 5px;
+  background-color: rgba(0,0,0,0.3);
+  display: inline-block;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.hero .hero-pill-tag {
+  padding: 3px 6px 2px;
+  background-color: #2363D8;
+  border-radius: 20px;
+  margin-inline-end: 4px;
 }
 
 .hero .hero-image img {
   transform: scale(1) perspective(1000px) rotateY(-13deg) rotateX(4deg) rotate(1deg);
+  box-shadow: 40px 40px 0px 0px rgba(45, 39, 89, 1);
 }
 
 .hero .buttons a {
@@ -123,15 +148,11 @@ img {
 .hero .button {
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
   display: inline-block;
-  padding: 10px 16px;
+  padding: 10px 18px 9px;
   border-radius: 10px;
   margin-top: 16px;
   line-height: 1.5em;
-}
-
-.hero .button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  text-transform: uppercase;
 }
 
 .try-button {
@@ -141,38 +162,37 @@ img {
 }
 
 .learn-more-button {
-  color: #0165E4;
-}
-
-.demo-button:hover {
-  background-color: #0CB0F9;
-}
-
-.learn-more-button:hover {
-  color: #0CB0F9;
+  color: rgb(82, 95, 127);
+  background-color: white;
 }
 
 .features {
-  width: 80%;
-  max-width: 1080px;
   margin: 0 auto;
   border-bottom: 1px solid #ebebea;
+}
+
+.feature-row:nth-child(odd) {
+  background-color: #F7F7F7;
 }
 
 .feature {
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-column-gap: 100px;
-  padding: 120px 0px;
+  padding: 140px 0px;
   align-items: center;
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
-.feature:nth-child(even) {
+.feature-row:nth-child(even) .feature {
   grid-template-columns: 3fr 2fr;
   grid-auto-flow: dense;
+  background-color: white;
 }
 
-.feature:nth-child(even) .feature-content {
+.feature-row:nth-child(even) .feature-content {
   grid-column-start: 2;
   grid-column-end: 3;
 }
@@ -195,7 +215,7 @@ img {
   right: -40px;
   border-radius: 20px;
   position: absolute;
-  z-index: -1;
+  z-index: 2;
 }
 
 .feature-image::after {
@@ -207,10 +227,10 @@ img {
   left: -40px;
   border-radius: 20px;
   position: absolute;
-  z-index: -2;
+  z-index: 1;
 }
 
-.feature:nth-child(even) .feature-image::before {
+.feature-row:nth-child(even) .feature-image::before {
   background: linear-gradient( 107.15deg, #0165e4 -130.13%, #04a7f0 14.67%, #08eefe 157.57% );
   content: "";
   width: 60%;
@@ -219,10 +239,10 @@ img {
   right: -40px;
   border-radius: 20px;
   position: absolute;
-  z-index: -1;
+  z-index: 2;
 }
 
-.feature:nth-child(even) .feature-image::after {
+.feature-row:nth-child(even) .feature-image::after {
   background: linear-gradient(270deg, rgba(81,74,93,0.7) 0%, rgba(81,74,93,1) 100%);
   content: "";
   width: 80%;
@@ -231,7 +251,7 @@ img {
   left: -40px;
   border-radius: 20px;
   position: absolute;
-  z-index: -2;
+  z-index: 1;
 }
 
 .instructions {
@@ -263,6 +283,10 @@ img {
     display: none;
   }
 
+  .background-wrapper {
+    background: linear-gradient(139.48deg, #2B2657 11.35%, #A043BB 93.71%);
+  }
+
   .hero {
     grid-template-columns: none;
     padding: 40px 0;
@@ -270,6 +294,7 @@ img {
 
   .hero .hero-image img {
     transform: none;
+    box-shadow: none;
   }  
 
   .hero .hero-image {
